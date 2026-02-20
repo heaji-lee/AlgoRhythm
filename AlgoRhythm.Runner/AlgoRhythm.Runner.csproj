@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AlgoRhythm.Problems\AlgoRhythm.Problems.csproj" />
+    <ProjectReference Include="..\AlgoRhythm.Tests\AlgoRhythm.Tests.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

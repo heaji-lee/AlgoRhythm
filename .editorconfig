@@ -1,0 +1,66 @@
+# Top-most EditorConfig file
+root = true
+
+[*]
+charset = utf-8
+indent_style = space
+indent_size = 4
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.cs]
+# ---------------------------
+# BRACES - K&R style (same line)
+# ---------------------------
+# For types, methods, properties, accessors, control blocks, anonymous methods, etc.
+csharp_new_line_before_open_brace = false
+csharp_new_line_before_open_brace_types = false
+csharp_new_line_before_open_brace_methods = false
+csharp_new_line_before_open_brace_properties = false
+csharp_new_line_before_open_brace_accessors = false
+csharp_new_line_before_open_brace_control_blocks = false
+csharp_new_line_before_open_brace_anonymous_methods = false
+csharp_new_line_before_open_brace_anonymous_types = false
+csharp_new_line_before_open_brace_object_collection_array_initializers = false
+csharp_new_line_before_else = false
+csharp_new_line_before_catch = false
+csharp_new_line_before_finally = false
+
+# Explicitly prefer braces (so single-line if statements still get braces)
+csharp_prefer_braces = true:suggestion
+
+# ---------------------------
+# INDENTATION
+# ---------------------------
+csharp_indent_braces = false
+csharp_indent_case_contents = true
+csharp_indent_switch_labels = false
+csharp_indent_block_contents = true
+csharp_indent_labels = one_less_than_current
+
+# ---------------------------
+# SPACING
+# ---------------------------
+csharp_space_before_open_square_brackets = false
+csharp_space_between_empty_square_brackets = false
+csharp_space_before_colon_in_base_type_list = true
+csharp_space_after_colon_in_base_type_list = true
+csharp_space_after_comma = true
+csharp_space_before_comma = false
+csharp_space_after_dot = false
+csharp_space_before_dot = false
+csharp_space_after_semicolon_in_for_statement = true
+csharp_space_before_semicolon_in_for_statement = false
+csharp_space_between_empty_braces = false
+csharp_space_before_open_brace = false
+csharp_wrap_arguments_style = chop_if_long
+
+# ---------------------------
+# NAMING CONVENTIONS
+# ---------------------------
+dotnet_naming_symbols.interface_prefix.required_prefix = I
+dotnet_naming_symbols.interface_prefix.applicable_kinds = interface
+dotnet_naming_symbols.interface_prefix.capitalization = pascal_case
+dotnet_naming_symbols.property_field_case.capitalization = pascal_case
+dotnet_naming_symbols.method_case.capitalization = pascal_case
