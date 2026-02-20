@@ -1,11 +1,8 @@
 namespace AlgoRhythm.Problems.Easy;
 
-public class Palindrome
-{
-    public bool IsPalindrome(int x)
-    {
-        if (x < 0)
-        {
+public class Palindrome {
+    public bool IsPalindrome(int x) {
+        if (x < 0) {
             return false;
         }
 
@@ -13,8 +10,7 @@ public class Palindrome
         int left = 0;
         int right = stringX.Length - 1;
 
-        while (left < right)
-        {
+        while (left < right) {
             if (stringX[left] != stringX[right])
                 return false;
 
