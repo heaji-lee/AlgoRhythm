@@ -2,9 +2,20 @@ namespace AlgoRhythm.Problems.Easy;
 
 public class LongestCommonPrefix {
     public string Solve(string[] strs) {
-        // Write a function to find the longest common prefix string amongst an array of strings.
+        if (strs == null || strs.Length == 0)
+            return "";
 
-        // If there is no common prefix, return an empty string "".
-        
+        var prefix = strs[0];
+
+        for (int i = 1; i < strs.Length; i++) {
+            while (!strs[i].StartsWith(prefix)) {
+                prefix = prefix.Substring(0, prefix.Length - 1);
+
+                if (prefix == "")
+                    return "";
+            }
+        }
+
+        return prefix;
     }
 }
