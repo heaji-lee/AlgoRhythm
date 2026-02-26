@@ -1,5 +1,4 @@
 <Solution>
   <Project Path="AlgoRhythm.Problems/AlgoRhythm.Problems.csproj" />
-  <Project Path="AlgoRhythm.Runner/AlgoRhythm.Runner.csproj" />
   <Project Path="AlgoRhythm.Tests/AlgoRhythm.Tests.csproj" />
 </Solution>
