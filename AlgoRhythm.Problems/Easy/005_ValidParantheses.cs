@@ -2,16 +2,23 @@ namespace AlgoRhythm.Problems.Easy;
 
 public class ValidParantheses {
     public bool IsValid(string s) {
-        // Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+        Stack<char> brackets = new Stack<char>();
 
-        // An input string is valid if:
+        foreach (var bracket in s) {
+            if (bracket == '(' || bracket == '{' || bracket == '[') {
+                brackets.Push(bracket);
+            } else {
+                if (brackets.Count == 0) {
+                    return false;
+                }
 
-        // Open brackets must be closed by the same type of brackets.
-        // Open brackets must be closed in the correct order.
-        // Every close bracket has a corresponding open bracket of the same type.
+                var match = brackets.Pop();
+                if ((match == '(' && bracket != ')') || (match == '{' && bracket != '}') || (match == '[' && bracket != ']')) {
+                    return false;
+                }
+            }
+        }
 
-        //Need to create stack
-        //Store opening brackets in order
-        //If there's a closing bracket, see if the top of stack is the matching opening bracket
+        return brackets.Count() == 0;
     }
 }
