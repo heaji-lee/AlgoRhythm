@@ -25,7 +25,6 @@ AlgoRhythm/
 │   ├── Medium/
 │   └── Hard/
 ├── AlgoRhythm.Tests/.     # xUnit tests for each problem
-├── AlgoRhythm.Runner/.    # Console app to run problems + see results
 └── AlgoRhythm.slnx
 ```
 
@@ -37,33 +36,7 @@ AlgoRhythm/
 
 ## How ro Run
 
-1. Run all tests via console runner
-
-```bash
-dotnet run --project AlgoRhythm.Runner
-```
-
-* Show sample outputs and friendly test results per problem.
-
-* Example output:
-
-```bash
-=== AlgoRhythm Runner ===
-
-Running TwoSumTests tests...
-
-Example1_ReturnsCorrectIndices: Passed ✅
-Example2_ReturnsCorrectIndices: Passed ✅
-Example3_ReturnsCorrectIndices: Passed ✅
-
-3/3 tests passed for TwoSumTests.
-
-Sample run for TwoSum:
-Input: [2,7,11,15], Target: 9
-Output indices: [0,1]
-```
-
-2. Run tests via dotnet test
+1. Run tests via dotnet test
 ```bash
 dotnet test
 ```
