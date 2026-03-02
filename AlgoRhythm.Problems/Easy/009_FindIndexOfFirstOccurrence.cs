@@ -2,10 +2,22 @@ namespace AlgoRhythm.Problems.Easy;
 
 public class FindIndexOfFirstOccurrence {
     public int Solve(string haystack, string needle) {
-        // return index of the first occurrence of needle in haystack
-        // return -1 if needle is not part of haystack
+        if (haystack.Length < needle.Length) return -1;
 
-        // haystack = "sadbutsad" needle = "sad" -> output = 0
-        // haystack = "leetcode" needle = "leeto" -> output = -1
+        for (int i = 0; i <= haystack.Length - needle.Length; i++) {
+            bool match = true;
+
+            for (int j = 0; j < needle.Length; j++) {
+                if (haystack[i + j] != needle[j]) {
+                    match = false;
+                    break;
+                }
+            }
+
+            if (match)
+                return i;
+        }
+
+        return -1;
     }
 }
