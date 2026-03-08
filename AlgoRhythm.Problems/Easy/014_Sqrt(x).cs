@@ -1,7 +1,7 @@
 namespace AlgoRhythm.Problems.Easy;
 
 public class Sqrt {
-  public int Solve (int x) {
-
-  }
+    public int Solve(int x) {
+        return 0;
+    }
 }
